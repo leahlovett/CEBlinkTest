@@ -28,16 +28,14 @@
 const int trigPin = 9;        //assign pin 9 to trigger
 const int echoPin = 10;       //assign pin 10 to echo
 const int LED = 13;           //keep the LED on pin 13
-const boolean debug = false;  //variable to show hide debug info
+const boolean debug = true;  //variable to show hide debug info
 
 // establish variables for duration of the ping, and the distance result in centimeters and one for LED blink rate:
 long duration, cm;
 int blinkrate = 0;
 
-// the setup function runs once when you press reset or power the board
+
 void setup() {
-  // initialize digital pin LED_BUILTIN as an output.
-  pinMode(13, OUTPUT);
   // initialize serial communication:
   if(debug){
     Serial.begin(9600);
@@ -48,7 +46,6 @@ void setup() {
   pinMode(echoPin, INPUT); // Sets the echoPin as an Input     
 }
 
-// the loop function runs over and over again forever
 void loop() {
   digitalWrite(trigPin, LOW);
   delayMicroseconds(2);
