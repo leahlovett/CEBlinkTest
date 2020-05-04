@@ -54,7 +54,7 @@ void loop() {
   delayMicroseconds(2);
   digitalWrite(trigPin, HIGH);
   delayMicroseconds(10);
-  digitalWrite(trigPin, LOW);                    // wait for half a second
+  digitalWrite(trigPin, LOW); 
   
   duration = pulseIn(echoPin, HIGH);
   cm = microsecondsToCentimeters(duration);
