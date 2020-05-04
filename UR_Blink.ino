@@ -82,8 +82,9 @@ void loop() {
 }
 
 delay(20);
+}
 
 long microsecondsToCentimeters(long microseconds) {
   return microseconds / 29 / 2;
 }
-}
+
